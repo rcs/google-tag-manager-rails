@@ -1,6 +1,3 @@
-if Rails
-  require 'google-tag-manager/rails/railtie'
-end
 module GoogleTagManager
   PLACEHOLDER_GTM_ID = "GTM-XXXX"
 
@@ -28,4 +25,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     HTML
 
   end
+end
+if defined?(Rails)
+  require 'google-tag-manager/rails/railtie'
 end
